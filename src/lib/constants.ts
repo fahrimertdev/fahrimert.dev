@@ -4,9 +4,9 @@ export const SITE = {
   description: 'I build tools for developers, freelancers, and the internet.',
   url: 'https://fahrimert.dev',
   social: {
-    twitter: 'https://x.com/fahrimert',
+    twitter: 'https://x.com/fahrimertdev',
     github: 'https://github.com/fahrimert',
     discord: '',
-    email: 'hello@fahrimert.dev',
+    email: 'fmtunckaya@gmail.com',
   },
 };

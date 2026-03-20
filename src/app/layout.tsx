@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'fahrimert.dev — building things that ship',
     description: 'I build tools for developers, freelancers, and the internet.',
-    creator: '@fahrimert',
+    creator: '@fahrimertdev',
   },
   robots: {
     index: true,
