@@ -1,0 +1,60 @@
+---
+title: "Building Previewly: The Problem with Client Feedback"
+date: "2026-03-18"
+excerpt: "Why every freelancer's nightmare is getting feedback on a deployed preview — and how I'm fixing it."
+tags: ["previewly", "buildinpublic", "product"]
+---
+
+# Building Previewly: The Problem with Client Feedback
+
+Every freelancer knows this scenario.
+
+You finish a website. You deploy it to a staging URL. You send the link to the client. Then comes the response:
+
+> "Looks great! A few notes — the header font seems a bit big on mobile, and I think the hero image should be different, also can you move the contact form higher? Also my colleague thinks the color is wrong but I think it's fine. Let me check with the team and get back to you. Also can you make the logo bigger?"
+
+That's five changes buried in one rambling email. Two of them are contradictory. One of them is from someone who wasn't even on the call.
+
+## The current state of preview feedback
+
+Right now, freelancers use:
+- **Email threads** — quickly becomes chaos with multiple stakeholders
+- **Screen recordings / screenshots** — helpful but disconnected from the actual page
+- **Comment tools like Loom** — great for async video, not for structured feedback
+- **InVision / Figma** — great for design, overkill for deployed web projects
+
+None of these let clients click *directly on the live site* and leave a comment. That's the gap.
+
+## What Previewly does
+
+The idea is simple:
+
+1. You deploy your project (Next.js, Vercel, whatever)
+2. You create a Previewly link pointing to your deployed URL
+3. You share that link with the client
+4. They click anywhere on the page and leave a comment — with a screenshot, a position, a description
+5. You see all feedback in one organized dashboard
+6. You resolve items, they approve
+7. Done. No email thread.
+
+## What I'm building with
+
+- **Next.js 14** (App Router) for the main app
+- **TypeScript** everywhere
+- **Vercel** for deployment (dogfooding FTW)
+- **Postgres** (via Supabase) for data
+- **Inject script** approach for the comment overlay — a small JS snippet that clients load on the preview page
+
+The hardest part is the comment overlay. It needs to:
+- Work on any website regardless of framework
+- Not break the site's existing interactions
+- Capture accurate position data (for showing where the comment is)
+- Be lightweight (< 10kb ideally)
+
+## Current status
+
+I have a working prototype of the overlay. It can capture click coordinates and screenshot a region. The comment creation UI is rough but functional.
+
+Next up: the dashboard, where you manage all feedback per project.
+
+More updates soon.
