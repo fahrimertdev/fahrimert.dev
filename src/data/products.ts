@@ -15,8 +15,8 @@ export const products: Product[] = [
     tagline: 'Deploy preview & feedback tool for freelancers',
     description:
       'Share deploy previews with clients. They click, comment, approve. No more email threads.',
-    url: 'https://previewly.dev',
-    status: 'building',
-    tags: ['Next.js', 'TypeScript', 'Vercel'],
+    url: 'https://previewly-three.vercel.app',
+    status: 'live',
+    tags: ['Next.js', 'TypeScript', 'Tailwind', 'Prisma', 'Vercel'],
   },
 ];
