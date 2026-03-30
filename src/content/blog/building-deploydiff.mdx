@@ -1,0 +1,42 @@
+---
+title: "Building DeployDiff — Visual Deploy Reviews for Humans"
+date: "2026-03-25"
+excerpt: "Git diff is for code. Deploy diff is for what actually changed in production. Here's why I built it."
+tags: ["buildinpublic", "deploydiff", "devtools"]
+---
+
+Git diff shows you what changed in code. But when a client or PM asks "what changed in this deploy?" — you don't hand them a git diff.
+
+That's the gap DeployDiff fills.
+
+## The Problem
+
+Every team doing continuous deployment runs into the same moment: something looks different in production, and nobody can quickly explain what changed visually. You can diff code, but you can't diff *experience* — until now.
+
+The flow is broken:
+- Developer pushes code
+- Preview deploy goes live
+- Stakeholder needs to review and approve
+- Back and forth on Slack, screenshots pasted into threads
+- Nobody actually knows if production matches the approved preview
+
+## The Solution
+
+DeployDiff takes two URLs — production and preview — runs Playwright against both, captures screenshots of every page, and diffs them visually. Then you get one shareable link with:
+
+- Side-by-side visual comparison
+- Highlighted pixel diffs
+- Comment threads per page
+- Approve/reject workflow
+
+Share the link. Stakeholder clicks, sees exactly what changed, approves. Done.
+
+## The Stack
+
+Built with Next.js, Playwright for screenshot capture, and Vercel for hosting. The diff engine runs on edge functions — fast and scalable without managing servers.
+
+## What's Next
+
+DeployDiff is live. Next up: Slack/GitHub PR integration, so the diff link shows up automatically on every PR. The goal is zero-friction deploy reviews.
+
+Try it at [deploydiff-psi.vercel.app](https://deploydiff-psi.vercel.app).

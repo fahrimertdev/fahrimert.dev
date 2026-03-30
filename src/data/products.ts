@@ -28,4 +28,13 @@ export const products: Product[] = [
     status: 'live',
     tags: ['Next.js', 'TypeScript', 'Tailwind', 'Vercel'],
   },
+  {
+    name: 'DeployDiff',
+    tagline: 'Not git diff. Deploy diff for humans.',
+    description:
+      'Visual deploy review and approval platform. Compare production vs preview, share one link, get comments and approval.',
+    url: 'https://deploydiff-psi.vercel.app',
+    status: 'live',
+    tags: ['Next.js', 'TypeScript', 'Tailwind', 'Playwright', 'Vercel'],
+  },
 ];
