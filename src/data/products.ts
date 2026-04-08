@@ -37,4 +37,13 @@ export const products: Product[] = [
     status: 'live',
     tags: ['Next.js', 'TypeScript', 'Tailwind', 'Playwright', 'Vercel'],
   },
+  {
+    name: 'ScreenDiet',
+    tagline: 'Turn your screen time into art.',
+    description:
+      'Select apps, assign usage times, pick a theme — export a beautiful shareable card in seconds. Wrapped energy for your digital habits.',
+    url: 'https://screendiet.vercel.app',
+    status: 'live',
+    tags: ['Next.js', 'TypeScript', 'Tailwind', 'Vercel'],
+  },
 ];
